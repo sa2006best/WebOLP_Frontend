@@ -21,7 +21,7 @@
       <Button
         type="primary"
         @click="handleLogin"
-        class="btn" long
+        class="btn"
         :loading="btnLoginLoading">
         {{$t('m.UserLogin')}}
       </Button>

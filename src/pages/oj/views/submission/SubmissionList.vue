@@ -31,7 +31,7 @@
             </li>
 
             <li>
-              <Button type="info" icon="refresh" @click="getSubmissions">{{$t('m.Refresh')}}</Button>
+              <Button type="info" icon="refresh" @click="getSubmissions" shape="circle"></Button>
             </li>
           </ul>
         </div>

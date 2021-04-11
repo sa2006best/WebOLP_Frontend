@@ -28,14 +28,11 @@
       </panel>
       <Row type="flex" justify="space-around">
         <Col :span="16">
-          <Row>
-            <Col :span="24">
+          <Row :gutter="16">
+            <Col :span="14">
               <Announcements class="announcement"></Announcements>
             </Col>
-          </Row>
-
-          <Row>
-            <Col :span="12">
+            <Col :span="10">
               <NewProblem :limit="15" class="announcement"></NewProblem>
             </Col>
           </Row>

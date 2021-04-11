@@ -1,12 +1,6 @@
 <template>
   <Row type="flex" justify="space-around">
     <Col :span="22">
-    <Panel :padding="10">
-      <div slot="title">{{$t('m.ACM_Ranklist')}}</div>
-      <div class="echarts">
-        <ECharts :options="options" ref="chart" auto-resize></ECharts>
-      </div>
-    </Panel>
     <Table :data="dataRank" :columns="columns" :loading="loadingTable" size="large"></Table>
     <Pagination :total="total" :page-size.sync="limit" :current.sync="page"
                 @on-change="getRankData" show-sizer

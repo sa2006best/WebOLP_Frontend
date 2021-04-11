@@ -1,6 +1,6 @@
 <template>
   <Row type="flex" :gutter="18">
-    <Col :span=19>
+    <Col :span=17>
     <Panel shadow>
       <div slot="title">{{$t('m.Problem_List')}}</div>
       <div slot="extra">
@@ -32,10 +32,7 @@
                    icon="ios-search-strong"/>
           </li>
           <li>
-            <Button type="info" @click="onReset">
-              <Icon type="refresh"></Icon>
-              {{$t('m.Reset')}}
-            </Button>
+            <Button type="info" @click="onReset" shape="circle" icon="refresh"></Button>
           </li>
         </ul>
       </div>
@@ -49,8 +46,8 @@
 
     </Col>
 
-    <Col :span="5">
-    <Panel :padding="10">
+    <Col :span="7">
+    <Panel :padding="10" style="text-align: center;">
       <div slot="title" class="taglist-title">{{$t('m.Tags')}}</div>
       <Button v-for="tag in tagList"
               :key="tag.name"
@@ -61,7 +58,7 @@
               class="tag-btn">{{tag.name}}
       </Button>
 
-      <Button long id="pick-one" @click="pickone">
+      <Button id="pick-one" @click="pickone" style="border-radius: 10px" type="primary">
         <Icon type="shuffle"></Icon>
         {{$t('m.Pick_One')}}
       </Button>
