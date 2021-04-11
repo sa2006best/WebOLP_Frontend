@@ -57,7 +57,7 @@
               shape="circle"
               class="tag-btn">{{tag.name}}
       </Button>
-
+      <br>
       <Button id="pick-one" @click="pickone" style="border-radius: 10px" type="primary">
         <Icon type="shuffle"></Icon>
         {{$t('m.Pick_One')}}
