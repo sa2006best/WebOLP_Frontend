@@ -1,28 +1,28 @@
 <template>
   <div id="header">
-    <Menu style="background-color: #222222" theme="dark" mode="horizontal" @on-select="handleRoute" :active-name="activeMenu" class="oj-menu">
-      <div class="logo"><span> <a href="/"> LOGO </a></span></div>
-      <Menu-item name="/">
+    <Menu style="background-color: #495060" theme="dark" mode="horizontal" @on-select="handleRoute" :active-name="activeMenu" class="oj-menu">
+      <div style="height:60px;"  class="logo"><span> <img height="60px" src="@/assets/logo.png"/><a href="/"> </a></span></div>
+      <Menu-item name="/" class="text-uppercase">
         <Icon type="home"></Icon>
         {{$t('m.Home')}}
       </Menu-item>
-      <Menu-item name="/problem">
+      <Menu-item name="/problem" class="text-uppercase">
         <Icon type="ios-keypad"></Icon>
         {{$t('m.NavProblems')}}
       </Menu-item>
-      <Menu-item name="/contest">
+      <Menu-item name="/contest" class="text-uppercase">
         <Icon type="trophy"></Icon>
         {{$t('m.Contests')}}
       </Menu-item>
-      <Menu-item name="/status">
+      <Menu-item name="/status" class="text-uppercase">
         <Icon type="ios-pulse-strong"></Icon>
         {{$t('m.NavStatus')}}
       </Menu-item>
-      <Menu-item name="/rank">
+      <Menu-item name="/rank" class="text-uppercase">
         <Icon type="ios-podium" />
         {{$t('m.Rank')}}
       </Menu-item>
-      <Menu-item name="/about">
+      <Menu-item name="/about" class="text-uppercase">
         {{$t('m.About')}}
       </Menu-item>
       <template v-if="!isAuthenticated">

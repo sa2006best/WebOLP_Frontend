@@ -159,6 +159,14 @@
             <p>{{$t('m.Level')}}</p>
             <p>{{$t('m.' + problem.difficulty)}}</p></li>
           <li v-if="problem.total_score">
+            <p>{{$t('m.OriginScore')}}</p>
+            <p>{{problem.total_score}}</p>
+          </li>
+          <li v-if="problem.total_score">
+            <p>{{$t('m.UNIQUE_ACCEPT_NUMBER')}}</p>
+            <p>{{problem.unique_accepted_number}}</p>
+          </li>
+          <li v-if="problem.total_score">
             <p>{{$t('m.Score')}}</p>
             <p>{{this.getProblemPoint(problem.unique_accepted_number, problem.total_score)}}</p>
           </li>

@@ -154,6 +154,12 @@
             }
           },
           {
+            title: this.$i18n.t('m.UNIQUE_ACCEPT_NUMBER'),
+            render: (h, params) => {
+              return h('span', params.row.unique_accepted_number)
+            }
+          },
+          {
             title: this.$i18n.t('m.Problem_Point'),
             render: (h, params) => {
               return h('span', this.getProblemPoint(params.row.unique_accepted_number, params.row.total_score))

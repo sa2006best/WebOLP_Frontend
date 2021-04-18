@@ -149,8 +149,6 @@
     methods: {
       getRankData (page) {
         let offset = (page - 1) * this.limit
-        let bar = this.$refs.chart
-        bar.showLoading({maskColor: 'rgba(250, 250, 250, 0.8)'})
         this.loadingTable = true
         api.getUserRank(offset, this.limit, RULE_TYPE.HYBRID).then(res => {
           this.loadingTable = false
@@ -159,10 +157,8 @@
           }
           this.total = res.data.data.total
           this.dataRank = this.sortResultData(res.data.data.results)
-          bar.hideLoading()
         }).catch(() => {
           this.loadingTable = false
-          bar.hideLoading()
         })
       },
       changeCharts (rankData) {
