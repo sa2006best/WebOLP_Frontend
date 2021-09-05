@@ -70,9 +70,9 @@
         </el-popover>
         </span>
 
-        <el-collapse v-model="activeNames" v-for="(release, index) of releases" :key="'release' + index">
-          <el-collapse-item :name="index+1">
-            <template slot="title">
+        <!-- <el-collapse v-model="activeNames" v-for="(release, index) of releases" :key="'release' + index"> -->
+          <!-- <el-collapse-item :name="index+1"> -->
+            <!-- <template slot="title">
               <div v-if="release.new_version">{{release.title}}
                 <el-tag size="mini" type="success">New Version</el-tag>
               </div>
@@ -84,9 +84,9 @@
               <ul v-for="detail in release.details" :key="detail">
                 <li v-html="detail"></li>
               </ul>
-            </div>
-          </el-collapse-item>
-        </el-collapse>
+            </div> -->
+          <!-- </el-collapse-item> -->
+        <!-- </el-collapse> -->
       </panel>
     </el-col>
   </el-row>
