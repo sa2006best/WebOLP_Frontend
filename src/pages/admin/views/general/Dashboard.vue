@@ -127,23 +127,7 @@
       api.getSessions().then(resp => {
         this.parseSession(resp.data.data)
       }, () => {
-      })
-      api.getReleaseNotes().then(resp => {
-        this.loadingReleases = false
-        let data = resp.data.data
-        if (!data) {
-          return
-        }
-        let currentVersion = data.local_version
-        data.update.forEach(release => {
-          if (release.version > currentVersion) {
-            release.new_version = true
-          }
-        })
-        this.releases = data.update
-      }, () => {
-        this.loadingReleases = false
-      })
+      })      
     },
     methods: {
       parseSession (sessions) {
