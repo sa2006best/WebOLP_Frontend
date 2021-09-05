@@ -115,7 +115,7 @@
         },
         activeNames: [1],
         session: {},
-        loadingReleases: true,
+        loadingReleases: false,
         releases: []
       }
     },
