@@ -111,6 +111,7 @@ function getLanguages() {
 
 function rankSort(a, b) {
   if (a.final_total_score > b.final_total_score) return -1;
+  if (a.final_total_score < b.final_total_score) return 1;
 
   let acRateOfA = getACRate(a.accepted_number, a.submission_number);
   let acRateOfB = getACRate(b.accepted_number, b.submission_number);
